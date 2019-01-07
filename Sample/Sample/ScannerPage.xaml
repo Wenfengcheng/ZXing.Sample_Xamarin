@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             Title="扫一扫"
+             x:Class="Sample.ScannerPage">
+    <Grid RowSpacing="0" ColumnSpacing="0" BackgroundColor="Transparent" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <zxing:ZXingScannerView x:Name="scanner"
+                                Grid.RowSpan="3" 
+                                Grid.ColumnSpan="3"/>
+        
+        <BoxView Grid.Row="0" 
+                 Grid.ColumnSpan="3" 
+                 BackgroundColor="{StaticResource HoverBackgroundColor}"/>
+        <BoxView Grid.Row="1" 
+                 Grid.Column="0" 
+                 BackgroundColor="{StaticResource HoverBackgroundColor}"/>
+        <BoxView Grid.Row="1" 
+                 Grid.Column="2" 
+                 BackgroundColor="{StaticResource HoverBackgroundColor}"/>
+        <BoxView Grid.Row="2" 
+                 Grid.ColumnSpan="3" 
+                 BackgroundColor="{StaticResource HoverBackgroundColor}"/>
+
+        <Label Grid.Row="0" 
+               Grid.Column="1" 
+               Margin="0,0,0,10" 
+               BackgroundColor="Transparent" 
+               TextColor="White" 
+               Text="将二维码放入框中自动扫描" 
+               VerticalOptions="End" 
+               HorizontalOptions="Center"/>
+
+        <BoxView x:Name="topLine" 
+                 Grid.Row="1" 
+                 Grid.Column="1" 
+                 Margin="1,1,1,0" 
+                 BackgroundColor="White" 
+                 HeightRequest="1" 
+                 VerticalOptions="Start" 
+                 HorizontalOptions="FillAndExpand"/>
+        <BoxView x:Name="bottomLine" 
+                 Grid.Row="1" 
+                 Grid.Column="1" 
+                 Margin="1,0,1,1" 
+                 BackgroundColor="White" 
+                 HeightRequest="1"
+                 VerticalOptions="End" 
+                 HorizontalOptions="FillAndExpand"/>
+        <BoxView Grid.Row="1" 
+                 Grid.Column="1" 
+                 Margin="1,1,0,1" 
+                 BackgroundColor="White" 
+                 WidthRequest="1" 
+                 HorizontalOptions="Start" 
+                 VerticalOptions="FillAndExpand"/>
+        <BoxView Grid.Row="1" 
+                 Grid.Column="1" 
+                 Margin="0,1,1,1" 
+                 BackgroundColor="White" 
+                 WidthRequest="1" 
+                 HorizontalOptions="End" 
+                 VerticalOptions="FillAndExpand"/>
+
+        <Image Grid.Row="1" 
+               Grid.Column="1" 
+               Source="left_top" 
+               HorizontalOptions="Start" 
+               VerticalOptions="Start"/>
+        <Image Grid.Row="1" 
+               Grid.Column="1" 
+               Source="right_top" 
+               HorizontalOptions="End" 
+               VerticalOptions="Start"/>
+        <Image Grid.Row="1" 
+               Grid.Column="1" 
+               Source="left_bottom" 
+               HorizontalOptions="Start" 
+               VerticalOptions="End"/>
+        <Image Grid.Row="1" 
+               Grid.Column="1" 
+               Source="right_bottom" 
+               HorizontalOptions="End" 
+               VerticalOptions="End"/>
+
+        <Image x:Name="line" 
+               Grid.Row="1" 
+               Grid.Column="1" 
+               Source="animate_line" 
+               VerticalOptions="Start"/>
+    </Grid>
+</ContentPage>
