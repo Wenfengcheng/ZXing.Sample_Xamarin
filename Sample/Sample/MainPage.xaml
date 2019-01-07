@@ -1,19 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Sample"
              x:Class="Sample.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Button Text="ZXingScannerView + Shared UI" 
+        <Button Text="DefaultOverlay" 
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"
-                Clicked="ScannerViewButton_Clicked"/>
+                Clicked="DefaultOverlayButton_Clicked"/>
+
+        <Button Text="ScanContinuously" 
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="ScanContinuouslyButton_Clicked"/>
+
+        <Button Text="ZXingScannerView + Custom Overlay" 
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="CustomOverlayButton_Clicked"/>
+
+        <Button Text="ZXingScannerView + Custom Page" 
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="CustomPageButton_Clicked"/>
+
         <Button Text="DependencyService + Platform UI " 
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand" 
                 Clicked="DependencyButton_Clicked"/>
+
+        <Button Text="GenerateBarcode" 
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" 
+                Clicked="GenerateBarcode_Clicked"/>
     </StackLayout>
 
 </ContentPage>
