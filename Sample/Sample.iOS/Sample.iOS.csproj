@@ -150,6 +150,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
     <PackageReference Include="ZXing.Net.Mobile.Forms">
       <Version>2.4.1</Version>
